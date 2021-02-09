@@ -3,7 +3,7 @@
 
 <head>
 	<meta name="viewport" content="width=1280, initial-scale=1">
-	<title>DND Loot Pool Generator</title>
+	<title>Blood Bowl</title>
 	<!-- CSS file link -->
 	<link href= "style.css" rel="stylesheet"/>
 	
@@ -12,99 +12,182 @@
 <body>
 
 	
-	<h1>Loot</h1>
-	<select id="creatureSelect" class="selection" onchange="newLoot()">
-  		<option value="Goblin">Goblin</option>
-  		<option value="Dragon">Dragon</option>
-  		<option value="Bandit">Bandit</option>
-  		<option value="Beholder">Beholder</option>
-	</select> 
-	<select id="lootSelect" class="selection" onchange="newLoot()">
-  		<option value="Encounter Level 1">Encounter Level 1</option>
-  		<option value="Encounter Level 2">Encounter Level 2</option>
-  		<option value="Encounter Level 3">Encounter Level 3</option>
-  		<option value="Encounter Level 4">Encounter Level 4</option>
-	</select> 
-	<button class="button" onclick="newLoot()">ROLL</button>
-	<script src="javascript.js"></script>
+	<h1>Character Creator</h1>
+<td>
 	
+	<a href='form.php'>Submit</a>
+	<input type="submit" value="Submit">
+	<form action="/form.php" method="post">
+</td>
 <table>	
 <tr>
-	<td>Loot Slot 1</td>
-	<td><div id ="lootDisplay"></div></td>		
+	<td>
+		<label for="cname">Coach:</label>
+	</td>
+	<td>
+		<input type="text" id="cname" name="cname">
+	</td>		
 </tr>
 <tr>
-	<td>Loot Slot 2</td>
-	<td><div id ="lootDisplay2">
-	</div></td>		
+	<td>
+		<label for="tname">Team Name:</label>
+	</td>
+	<td>
+		<input type="text" id="tname" name="tname">
+	</td>	
 </tr>
 <tr>
-	<td>Loot Slot 3</td>
-	<td><div id ="lootDisplay3">
-	</div></td>		
+	<td>
+		<br>
+	</td>
+	<td>
+		</br>
+	</td>		
+</tr>
+
+<tr>
+	<td>
+		<label for="pname">Player Name:</label>
+	</td>
+	<td>
+		<input type="text" id="pname" name="pname">
+	</td>		
 </tr>
 <tr>
-	<td>Copper (cp)</td>
-	<td><div id ="copperDisplay"></div></td>		
+	<td>
+		<label for="nname">Player Number:</label>
+	</td>
+	<td>
+		<input type="text" id="nname" name="nname">
+	</td>		
 </tr>
 <tr>
-	<td>Silver (sp)</td>
-	<td><div id ="silverDisplay"></div></td>	
+	<td>
+		<label for="ssp">SSP:</label>
+	</td>
+	<td>
+		<input type="text" id="ssp" name="ssp">
+	</td>		
 </tr>
 <tr>
-	<td>Gold (gp)</td>	
-	<td><div id ="goldDisplay"></div></td>	
+	<td>
+		<label for="aname">Advancement:</label>
+	</td>
+	<td>
+		<text name="aname" id="aname">
+		<option value="Ability A, Cost 1">Ability A, Cost 1</option>
+		</text>
+	</td>	
+<td>
+		<button onclick="randRoll()">Random</button> 
+<script src="javascript.js"></script>		
+</td>	
 </tr>
+<tr>
+	<td>
+		<br>
+	</td>
+	<td>
+		</br>
+	</td>		
+</tr>
+
+<tr>
+	<td>
+		<label for="pname">Player Name:</label>
+	</td>
+	<td>
+		<input type="text" id="pname" name="pname">
+	</td>		
+</tr>
+<tr>
+	<td>
+		<label for="nname">Player Number:</label>
+	</td>
+	<td>
+		<input type="text" id="nname" name="nname">
+	</td>		
+</tr>
+<tr>
+	<td>
+		<label for="ssp">SSP:</label>
+	</td>
+	<td>
+		<input type="text" id="ssp" name="ssp">
+	</td>		
+</tr>
+<tr>
+	<td>
+		<label for="aname">Advancement:</label>
+	</td>
+	<td>
+		<text name="aname" id="aname">
+		<option value="Ability A, Cost 1">Ability A, Cost 1</option>
+		</text>
+	</td>	
+<td>
+	 <button onclick="randRoll()">Random</button> 
+		<script src="javascript.js"></script>	 
+</td>	
+</tr>
+<tr>
+	<td>
+		<br>
+	</td>
+	<td>
+		</br>
+	</td>		
+</tr>
+<tr>
+	<td>
+		<label for="pname">Player Name:</label>
+	</td>
+	<td>
+		<input type="text" id="pname" name="pname">
+	</td>		
+</tr>
+<tr>
+	<td>
+		<label for="nname">Player Number:</label>
+	</td>
+	<td>
+		<input type="text" id="nname" name="nname">
+	</td>		
+</tr>
+<tr>
+	<td>
+		<label for="ssp">SSP:</label>
+	</td>
+	<td>
+		<input type="text" id="ssp" name="ssp">
+	</td>		
+</tr>
+<tr>
+	<td>
+		<label for="aname">Advancement:</label>
+	</td>
+	<td>
+		<text name="aname" id="aname">
+		<option value="Ability A, Cost 1">Ability A, Cost 1</option>
+	</text>
+	</td>	
+<td>
+	 <button onclick="randRoll()">Random</button> 
+	 <script src="javascript.js"></script>
+</td>	
+</tr>
+<tr>
+	<td>
+		<br>
+	</td>
+	<td>
+		</br>
+	</td>		
+</tr>
+
 </table>
-
-
-<h1>Treasure Pile</h1>
-	<select id="lairSelect" class="selection" onchange="newLoot2()">
-  		<option value="Plains">Plains</option>
-  		<option value="Forest">Forest</option>
-  		<option value="Island">Island</option>
-  		<option value="Swamp">Swamp</option>
-	</select> 
-
-	<select id="treasureSelect" class="selection" onchange="newLoot2()">
-  		<option value="Encounter Level 1">Encounter Level 1</option>
-  		<option value="Encounter Level 2">Encounter Level 2</option>
-  		<option value="Encounter Level 3">Encounter Level 3</option>
-  		<option value="Encounter Level 4">Encounter Level 4</option>
-	</select>
-
-	<button class="button" onclick="newLoot2()">ROLL</button>
-	<script src="javascript2.js"></script>
-	
-<table>	
-<tr>
-	<td>Loot Slot 1</td>
-	<td><div id ="treasureDisplay"></div></td>		
-</tr>
-<tr>
-	<td>Loot Slot 2</td>
-	<td><div id ="treasureDisplay2">
-	</div></td>		
-</tr>
-<tr>
-	<td>Loot Slot 3</td>
-	<td><div id ="treasureDisplay3">
-	</div></td>		
-</tr>
-<tr>
-	<td>Copper (cp)</td>
-	<td><div id ="copperTDisplay"></div></td>		
-</tr>
-<tr>
-	<td>Silver (sp)</td>
-	<td><div id ="silverTDisplay"></div></td>	
-</tr>
-<tr>
-	<td>Gold (gp)</td>	
-	<td><div id ="goldTDisplay"></div></td>	
-</tr>
-</table>
-
+  
+</form>
 
 </body>
 </html>
